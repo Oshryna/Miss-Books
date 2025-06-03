@@ -1,16 +1,13 @@
-const { useRef, useEffect } = React
-
 export function Home() {
-    const h1Ref = useRef()
-
-    useEffect(() => {
-        console.log('h1Ref:', h1Ref)
-    }, [])
-
-    return (
-        <section className="home">
-            <h1 ref={h1Ref}>Car's R Us!</h1>
-            <img src="../assets/img/react.png" alt="hero-image" />
-        </section>
-    )
+  return (
+    <section className="home">
+      <h1>Welcome to Miss Books</h1>
+      <h2>Your Personal Book Management System</h2>
+      <p>
+        Discover, organize, and manage your book collection with ease. Miss
+        Books helps you keep track of your favorite reads, explore new titles,
+        and build your personal library.
+      </p>
+    </section>
+  );
 }

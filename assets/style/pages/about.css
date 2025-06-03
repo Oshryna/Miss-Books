@@ -1,8 +1,75 @@
-
 .about {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.about  nav {
-    display: flex;
-    gap: 1em;
+.about h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.experiment-info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #3498db;
+}
+
+.experiment-info h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.experiment-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experiment-info li {
+  padding: 0.5rem 0;
+  color: #555;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.experiment-info li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+}
+
+.about nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.about nav a {
+  padding: 0.75rem 1.5rem;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.about nav a:hover {
+  background: #2980b9;
 }

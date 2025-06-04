@@ -6,7 +6,7 @@ import { Team } from "./cmps/AboutCmps/Team.jsx";
 import { AppHeader } from "./cmps/AppHeader.jsx";
 import { NotFound } from "./cmps/NotFound.jsx";
 import { About } from "./pages/About.jsx";
-import { CarIndex } from "./pages/CarIndex.jsx";
+import { BookIndex } from "./pages/BookIndex.jsx";
 import { Home } from "./pages/Home.jsx";
 // import { CarDetails } from "./pages/CarDetails.jsx";
 
@@ -28,8 +28,8 @@ export function App() {
               <Route path="/about/vision" element={<Vision />} />
               <Route path="/about/team" element={<Team />} />ƒ
             </Route>
-            {/* <Route path="/car" element={<CarIndex />} />
-                    <Route path="/car/:carId" element={<CarDetails />} /> */}
+            <Route path="/book" element={<BookIndex />} />
+            {/* <Route path="/book/:bookId" element={<CarDetails />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

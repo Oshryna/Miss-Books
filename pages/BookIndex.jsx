@@ -1,10 +1,10 @@
 // import { CarFilter } from "../cmps/CarFilter.jsx";
-// import { CarList } from "../cmps/CarList.jsx";
-import { carService } from "../services/book.service.js";
+import { BookList } from "../cmps/BookList.jsx";
+import { bookService } from "../services/book.service.js";
 
 const { useEffect, useState } = React;
 
-export function CarIndex() {
+export function BookIndex() {
   // const [cars, setCars] = useState(null)
   // const [filterBy, setFilterBy] = useState(carService.getDefaultFilter())
 
@@ -46,9 +46,28 @@ export function CarIndex() {
   //     </section>
   // )
 
+  const [books, setBooks] = useState(null);
+
+  useEffect(() => {
+    loadBooks();
+  }, []);
+
+  function loadBooks() {
+    bookService
+      .query()
+      .then(setBooks)
+      .catch((err) => console.log("error:", err));
+  }
+
+  if (!books) return <div>Loading...</div>;
+
   return (
-    <div>
-      <h1>Car Index</h1>
-    </div>
+    <section className="car-index">
+      {/* <CarFilter onSetFilter={onSetFilter} filterBy={filterBy} /> */}
+      <BookList
+        books={books}
+        // onRemoveCar={onRemoveCar}
+      />
+    </section>
   );
 }

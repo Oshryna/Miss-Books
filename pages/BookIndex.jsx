@@ -59,15 +59,22 @@ export function BookIndex() {
       .catch((err) => console.log("error:", err));
   }
 
+  function onRemoveBook(bookId) {
+    console.log(`removing book ${bookId}`);
+    bookService
+      .remove(bookId)
+      .then(
+        setBooks((prevBooks) => prevBooks.filter((book) => book.id !== bookId))
+      )
+      .catch((err) => console.log("Failed to remove book: ", err));
+  }
+
   if (!books) return <div>Loading...</div>;
 
   return (
     <section className="car-index">
       {/* <CarFilter onSetFilter={onSetFilter} filterBy={filterBy} /> */}
-      <BookList
-        books={books}
-        // onRemoveCar={onRemoveCar}
-      />
+      <BookList books={books} onRemoveBook={onRemoveBook} />
     </section>
   );
 }

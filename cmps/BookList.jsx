@@ -2,10 +2,7 @@ const { Link } = ReactRouterDOM;
 
 import { BookPreview } from "./BookPreview.jsx";
 
-export function BookList({
-  books,
-  onRemoveBook = () => console.log("remove!"),
-}) {
+export function BookList({ books, onRemoveBook }) {
   return (
     <ul className="car-list">
       {books.map((book, index) => (
